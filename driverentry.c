@@ -1,3 +1,12 @@
+/*
+    Proof of concept
+
+    Windows XP driver for bypassing SSDT hooks by copying the shadow table when the driver is loaded and
+        allowing the functions to be called indirectly through DeviceIoControl
+
+    Sammy Hosny
+*/
+
 #include <ntddk.h>
 
 #define		NTUSI_PROXY_DEV_LINK	L"\\DosDevices\\NtUserSendInput_Proxy"
